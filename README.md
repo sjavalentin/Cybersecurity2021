@@ -2,25 +2,27 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
-
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
+![alt text]https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Diagrams/Network%20Diagram.jpg "Diagrams/Network Diagram.jpg")
 
 
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the **yml** file may be used to install only certain pieces of it, such as Filebeat.
+	- ELK install
+	- [Filebeat playbook](https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Ansible/filebeat-playbook.yml)
+	- [Metricbeat playbook](https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Ansible/metricbeat-playbook.yml)
 
 
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+Load balancing ensures that the application will be highly **available**, in addition to restricting **access** to the network.
 
-If an attacker attcks the DVWA container with enough traffic, they may be able to trigger a Denial of Service on the machine. Load balancers are in place to protect from DDos attacks. They help ensure environment availability through distribution of incoming data to webservers. Jumpboxes allow for more easy administrations of multiple systems and provide an additional layer between the outside and internal assets.
+**If an attacker attacks the DVWA container with enough traffic, they may be able to trigger a Denial of Service on the machine. Load balancers are in place to protect from DDos attacks. They help ensure environment availability through distribution of incoming data to webservers. Jumpboxes allow for more easy administrations of multiple systems and provide an additional layer between the outside and internal assets.**
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system metrics.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **logs** and system **metrics**.
 
-Filebeat monitors the logs for any information in the file system that has been modified and when a file has been modified. 
-Metricbeat takes the metrics and statistics  that it collects and ships them to the output you specify, such as Elasticsearch or Logstash.
+**Filebeat monitors the logs for any information in the file system that has been modified and when a file has been modified. 
+Metricbeat takes the metrics and statistics  that it collects and ships them to the output you specify, such as Elasticsearch or Logstash.**
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -36,11 +38,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the JumpBox provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-	-Personal IP
+Only the **JumpBox provisioner** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+	- **Personal IP**
 
 
-Machines within the network can only be accessed by the JumpBox. The Elk machine can have access from personal IP address through port 5601.	
+Machines within the network can only be accessed by the **JumpBox**. The Elk machine can have access from **personal IP** address through **port 5601**.	
 
 
 A summary of the access policies in place can be found in the table below.
@@ -57,9 +59,8 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because services running can be limited, system installation and update can be streamlined, and process become more replicable.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
