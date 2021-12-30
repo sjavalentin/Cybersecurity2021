@@ -2,13 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![alt text]https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Diagrams/Network%20Diagram.jpg "Diagrams/Network Diagram.jpg")
+![alt text](https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Diagrams/Network%20Diagram.jpg "Diagrams/Network Diagram.jpg")
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the **yml** file may be used to install only certain pieces of it, such as Filebeat.
-	- ELK install
-	- [Filebeat playbook](https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Ansible/filebeat-playbook.yml)
-	- [Metricbeat playbook](https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Ansible/metricbeat-playbook.yml)
+
+	* ELK install
+	* [Filebeat playbook](https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Ansible/filebeat-playbook.yml)
+	* [Metricbeat playbook](https://github.com/sjavalentin/Cybersecurity2021/blob/386b43783470eddcf02b77e9991ce8d866b8de64/Ansible/metricbeat-playbook.yml)
 
 
 ### Description of the Topology
@@ -56,10 +57,17 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because services running can be limited, system installation and update can be streamlined, and process become more replicable.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because **services running can be limited, system installation and update can be streamlined, and process become more replicable.**
 
 The playbook implements the following tasks:
-
+- Installs docker.io
+- Install pip3
+- Install Docker python pip module
+- Use sysctl module to increase memory
+- Configure container to start with the following port mappings 
+	- 5601:5601
+	- 9200:9200
+	- 5044:5044
 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
