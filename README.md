@@ -92,23 +92,16 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-- **Filebeat forwards and centralizes log data from your target machines. It monitors the log files that you specify and collects the log events, then forwards them to the elk server. **
-- **Metricbeat collects the machine metrics and statistical data, such as CPU usage, memory usage and inbound/outbound traffic and sends the data to the ELK server. **
-
+- Filebeat forwards and centralizes log data from your target machines. It monitors the log files that you specify and collects the log events, then forwards them to the elk server. 
+- Metricbeat collects the machine metrics and statistical data, such as CPU usage, memory usage and inbound/outbound traffic and sends the data to the ELK server. 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
 
-- Copy the *playbook YML* files to *Ansible Control node* folder.
+- Copy the *playbook YML* files to *Ansible Control node* folder.Filebeat and Metricbeat Playbook can be found here: [filebeat](Ansible/filebeat-playbook.yml) and [metricbeat](Ansible/metricbeat-playbook.yml)
 - Update the *hosts* files to include *webservers and elk IP addesses*
 - Edit hosts files to update and make run ansible playbook on a specific machine, and specify which machine to install the ELK server on versus which to install Filebeat.
 - Run the playbook, and navigate to *Kibana* to check that the installation worked as expected.
 - Check that ELK server is running: http://[ELK IP]/app/kibsana#/home
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
