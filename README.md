@@ -86,15 +86,14 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 
-	- *Filebeat*
-	- *Metricbeat*
+	- **Filebeat**
+	- **Metricbeat**
 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
-- *Filebeat forwards and centralizes log data from your target machines. It monitors the log files that you specify and collects the log events, then forwards them to the elk server. 
-- *Metricbeat collects the machine metrics and statistical data, such as CPU usage, memory usage and inbound/outbound traffic and sends the data to the ELK server. 
+- **Filebeat forwards and centralizes log data from your target machines. It monitors the log files that you specify and collects the log events, then forwards them to the elk server. **
+- **Metricbeat collects the machine metrics and statistical data, such as CPU usage, memory usage and inbound/outbound traffic and sends the data to the ELK server. **
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -105,7 +104,7 @@ SSH into the control node and follow the steps below:
 - Update the *hosts* files to include *webservers and elk IP addesses*
 - Edit hosts files to update and make run ansible playbook on a specific machine, and specify which machine to install the ELK server on versus which to install Filebeat.
 - Run the playbook, and navigate to *Kibana* to check that the installation worked as expected.
-- Check that ELK server is running: http://[ELK IP]/app/kibana#/home
+- Check that ELK server is running: http://[ELK IP]/app/kibsana#/home
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
